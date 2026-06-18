@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in JS</title>
+</head>
+<body>
+    <script>
+        //object {} - it is a collection of keys(property) and its value
+        
+        //create object - literal {} and new keyword
+        //create object for student
+        let student = {
+            id:101, 
+            name:"faraz", 
+            age:20,
+            isMarried:false,
+            address:{
+                streetNo:2,
+                area:"chipiyana",
+                pincode:201009,
+                city:"Ghaziabad",
+            },
+            education:["B.Tech","CSE","AIML-3",2025],
+            getInfo:function(){
+                return "my details are " + student.id + "and" + student.name;
+            },
+            examDone:null   
+        };
+        // console.log(student);
+        // console.log(typeof(student));
+
+        //access object's properties/keys
+        // console.log(student.getInfo());
+
+        //find object's keys in object
+        console.log('id' in student);
+        
+	//delete object's keys from object
+	console.log(delete student.name); 
+        
+	console.log(student);
+        
+	// object's length:
+	// let StudentKeys = Object.keys(student);
+	// console.log(StudentKeys.length);
+
+	//iterate keys of object
+
+        // for in loop
+        // for(let x in student){
+        //     console.log(student[x]);
+        // }
+        
+        // create an object
+
+        let myInfo=new Object();
+        myInfo.name="faraz";
+        myInfo.age=20;
+        console.log(myInfo.name);
+
+    </script>
+</body>
+</html>
